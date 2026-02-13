@@ -1,0 +1,15 @@
+let form = document.querySelector('form');
+
+form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    const Boy = document.getElementById('Boy');
+    const Girl = document.getElementById('Girl');
+    
+    const l1 = Boy.value.length;
+    const l2 = Girl.value.length;
+
+    const result = Math.pow(l1+l2,3)%101;
+    let text = document.getElementById('result');
+    text.textContent =` ${result}% Match`;
+    form.reset();
+});
